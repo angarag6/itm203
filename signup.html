@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүртгүүлэх хуудас</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+        <header class="flex justify-around pt-5">
+            <img class="w-[50px]" onclick="window.location.href='main.html'" src="https://th.bing.com/th/id/OIP.q-nhsFY1gE9omsMeeKiUPgHaHa?rs=1&pid=ImgDetMain" alt="">
+            <div class="flex justify-center items-center gap-[30px]">
+                <button class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">сагс</button>
+                <button onclick="window.location.href='login.html'" class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">нэвтрэх</button>
+            </div>
+        </header>
+    <main>
+        <section class="registration-form">
+            <h1>Бүртгүүлэх</h1>
+            <form>
+                <label for="name">Нэр</label>
+                <input type="text" id="name" placeholder="Нэрээ оруулна уу">
+
+                <label for="email">И-мэйл</label>
+                <input type="email" id="email" placeholder="И-мэйл хаягаа оруулна уу">
+
+                <label for="username">Хаяг</label>
+                <input type="text" id="username" placeholder="Та хаягаа оруулна уу">
+
+                <label for="password">Нууц үг</label>
+                <input type="password" id="password" placeholder="Нууц үг оруулна уу">
+
+                <label for="confirm-password">Нууц үг давтах</label>
+                <input type="password" id="confirm-password" placeholder="Нууц үг давтан оруулна уу">
+
+                <div class="terms">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">Үйлчилгээний нөхцөлийг зөвшөөрөх</label>
+                </div>
+
+                <button type="submit">Бүртгүүлэх</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Computer store</h3>
+                <p>Бидэнтэй холбогдох</p>
+                <p>📞 976-99001041</p>
+                <p>📧 info@computerstore.com</p>
+                <p>📍 Сүхбаатар дүүрэг, 1-р хороо, Чингисийн өргөн чөлөө-17, Гурван гол, 4 давхар</p>
+            </div>
+            <div class="links">
+                <h4>Тусламж</h4>
+                <p>Бидний тухай</p>
+                <p>Түгээмэл асуулт, хариулт</p>
+            </div>
+            <div class="social">
+                <h4>Биднийг дагах</h4>
+                <p>🔗 Facebook</p>
+                <p>🔗 Instagram</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
