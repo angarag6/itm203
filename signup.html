@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бүртгүүлэх хуудас</title>
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="text.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-        <header class="flex justify-around pt-5">
-            <img class="w-[50px]" onclick="window.location.href='main.html'" src="https://th.bing.com/th/id/OIP.q-nhsFY1gE9omsMeeKiUPgHaHa?rs=1&pid=ImgDetMain" alt="">
-            <div class="flex justify-center items-center gap-[30px]">
-                <button class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">сагс</button>
-                <button onclick="window.location.href='login.html'" class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">нэвтрэх</button>
-            </div>
-        </header>
+    <header class="header">
+        <div onclick="window.location.href='main.html'" class="logo">Computer Store</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <button onclick="window.location.href='basket.html'" class="login-btn"><i class="fas fa-user"></i> сагс</button>
+            <button onclick="window.location.href='login.html'" class="login-btn"><i class="fas fa-user"></i> Нэвтрэх</button>
+        </div>
+    </header>
     <main>
         <section class="registration-form">
             <h1>Бүртгүүлэх</h1>
@@ -44,25 +49,17 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
-            <div class="contact-info">
-                <h3>Computer store</h3>
-                <p>Бидэнтэй холбогдох</p>
-                <p>📞 976-99001041</p>
-                <p>📧 info@computerstore.com</p>
-                <p>📍 Сүхбаатар дүүрэг, 1-р хороо, Чингисийн өргөн чөлөө-17, Гурван гол, 4 давхар</p>
-            </div>
-            <div class="links">
-                <h4>Тусламж</h4>
-                <p>Бидний тухай</p>
-                <p>Түгээмэл асуулт, хариулт</p>
-            </div>
-            <div class="social">
-                <h4>Биднийг дагах</h4>
-                <p>🔗 Facebook</p>
-                <p>🔗 Instagram</p>
-            </div>
+            <h3>Computer Store</h3>
+            <p>Бидний байршил: Монгол улс</p>
+            <p>Утас: 99001122</p>
+            <p>Имэйл: info@store.mn</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 </body>

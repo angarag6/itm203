@@ -1,116 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind CSS Example</title>
-  <!-- Tailwind CSS-ийг CDN-аас суулгах -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Store</title>
+    <link rel="stylesheet" href="text.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #282c34;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #61dafb;
+            border: none;
+            cursor: pointer;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .products {
+            padding: 20px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            margin-bottom: 10px;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card {
+            flex: 0 0 auto;
+            width: 200px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .carousel {
+            animation: scroll-carousel 15s linear infinite;
+        }
+
+        @keyframes scroll-carousel {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 3)); 
+            }
+        }
+    </style>
 </head>
 <body>
-  <section class="gap-[30px] flex flex-col">
-    <header class="flex justify-around pt-5">
-        <img class="w-[50px]" src="https://th.bing.com/th/id/OIP.q-nhsFY1gE9omsMeeKiUPgHaHa?rs=1&pid=ImgDetMain" alt="">
-        <div class="flex justify-center items-center gap-[30px]">
-            <button class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">сагс</button>
-            <button onclick="window.location.href='login.html'" class="bg-purple-300 px-2 py-1 rounded-md text-purple-950">нэвтрэх</button>
+    <header class="header">
+        <div onclick="window.location.href='main.html'" class="logo">Computer Store</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <button onclick="window.location.href='basket.html'" class="login-btn"><i class="fas fa-user"></i> сагс</button>
+            <button onclick="window.location.href='login.html'" class="login-btn"><i class="fas fa-user"></i> Нэвтрэх</button>
         </div>
     </header>
-    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/hero-lg-ref-1948900-42535626-850f-4049-8c55-41f6d0beeca4.jpg" class="w-full" alt="">
-    <div class="px-20 py-5 gap-[30px] flex flex-col">
-        <h1 class="text-5xl font-bold">Дэлгэц</h1>
-        <div class="flex gap-[30px]">
-            <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        </div>
-    </div>
-    <div class="px-20 py-5 gap-[30px] flex flex-col">
-        <h1 class="text-5xl font-bold">Эх хавтан</h1>
-        <div class="flex gap-[30px]">
-            <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        </div>
-    </div>
-    <div class="px-20 py-5 gap-[30px] flex flex-col">
-        <h1 class="text-5xl font-bold">Mouse</h1>
-        <div class="flex">
-            <div class="prev justify-center items-center flex bg-black" onclick="moveSlide(-1)">❮</div>
-        <div class="flex gap-[30px] slider">
-            <img src="https://media.wired.com/photos/63484c4a7fa81ffa8c2b010a/191:100/w_2580,c_limit/aerox-9-wireless-SOURCE-SteelSeries-Gear.jpg" class="w-full h-[300px] slide" alt="">
-        <img src="https://media.wired.com/photos/63484c4a7fa81ffa8c2b010a/191:100/w_2580,c_limit/aerox-9-wireless-SOURCE-SteelSeries-Gear.jpg" class="w-full h-[300px] slide" alt="">
-        <img src="https://media.wired.com/photos/63484c4a7fa81ffa8c2b010a/191:100/w_2580,c_limit/aerox-9-wireless-SOURCE-SteelSeries-Gear.jpg" class="w-full h-[300px] slide" alt="">
-        </div>
-        <div class="next justify-center items-center flex bg-black" onclick="moveSlide(1)">❯</div>
-        </div>
-    </div>
-    <div class="px-20 py-5 gap-[30px] flex flex-col">
-        <h1 class="text-5xl font-bold">PC case</h1>
-        <div class="flex gap-[30px]">
-            <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        <img src="" class="w-[260px] h-[320px]" alt="">
-        </div>
-    </div>
-    <footer class="bg-purple-300 p-10 flex flex-col">
-        <h1 class="font-bold text-[30px]">Computer store</h1>
-        <div class="flex justify-between">
-            <div class="flex flex-col gap-5">
-                <div>
-                <p class="font-semibold">Бидэнтэй холбогдох</p>
-                <p>976-99001041</p>
-                <p>info@coomputerstore.com</p>
+
+    <section class="banner">
+        <img src="banner-image.jpg" alt="HAF 700">
+    </section>
+
+    <main class="products">
+        <section class="category">
+            <h2>Дэлгэц</h2>
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Бүтээгдэхүүн 1</p>
                 </div>
-                <div>
-                    <p class="font-semibold">Хаяг</p>
-                    <p>Сүхбаатар дүүрэг, 1-р хороо, Чингисийн өргөн чөлөө-17, Гур, 4 давхарт</p>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Бүтээгдэхүүн 2</p>
+                </div>
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Product 3">
+                    <p>Бүтээгдэхүүн 3</p>
                 </div>
             </div>
-            <div class="flex flex-col gap-5">
-                <div>
-                <p class="font-semibold">Тусламж</p>
-                <p>Бидний тухай</p>
-                <p>Түгээмэл асуулт, хариулт</p>
+        </section>
+
+        <section class="category">
+            <h2>Эх хавтан</h2>
+            <div class="carousel">
+                <div class="product-card">
+                    <img src="product4.jpg" alt="Product 4">
+                    <p>Бүтээгдэхүүн 4</p>
                 </div>
-                <div>
-                    <p class="font-semibold">Биднийг дагах</p>
-                    <p>insta</p>
+                <div class="product-card">
+                    <img src="product5.jpg" alt="Product 5">
+                    <p>Бүтээгдэхүүн 5</p>
+                </div>
+                <div class="product-card">
+                    <img src="product6.jpg" alt="Product 6">
+                    <p>Бүтээгдэхүүн 6</p>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Computer Store</h3>
+            <p>Бидний байршил: Монгол улс</p>
+            <p>Утас: 99001122</p>
+            <p>Имэйл: info@store.mn</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
-  </section>
-
-  <script>
-    let currentIndex = 0;
-  
-    // Слайдуудыг шилжүүлэх функц
-    function moveSlide(direction) {
-      const slides = document.querySelector('.slider');
-      const totalSlides = document.querySelectorAll('.slide').length;
-  
-      currentIndex += direction;
-  
-      // Хэрэв слайд дуусвал эхлэх буюу төгсгөлийн слайд руу шилжинэ
-      if (currentIndex < 0) {
-        currentIndex = totalSlides - 1;
-      } else if (currentIndex >= totalSlides) {
-        currentIndex = 0;
-      }
-  
-      // Слайдуудыг шилжүүлэх
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  
-    // Автомат слайд солигдох
-    setInterval(() => {
-      moveSlide(1);
-    }, 3000); // 3 секунд тутамд слайд солигдоно
-  </script>
 </body>
 </html>

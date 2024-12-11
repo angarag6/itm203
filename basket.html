@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сагс</title>
+    <link rel="stylesheet" href="basket.css">
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+    <header class="header">
+        <div onclick="window.location.href='main.html'" class="logo">Computer Store</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <button onclick="window.location.href='basket.html'" class="login-btn"><i class="fas fa-user"></i> сагс</button>
+            <button onclick="window.location.href='login.html'" class="login-btn"><i class="fas fa-user"></i> Нэвтрэх</button>
+        </div>
+    </header>
+    <main class="cart-container">
+         
+        <div class="progress-bar">
+            <span class="step active">1</span>
+            <span class="step">2</span>
+            <span class="step">3</span>
+        </div>
+        
+        <section class="cart">
+            <h1>1. Сагс (4)</h1>
+            <div class="cart-item">
+                <img src="product-image.jpg" alt="Chunky Glyph Tee">
+                <div class="details">
+                    <h2>Chunky Glyph Tee</h2>
+                    <div class="quantity">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    <p class="price">120'000₮</p>
+                </div>
+                <button class="remove">🗑</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="product-image.jpg" alt="Chunky Glyph Tee">
+                <div class="details">
+                    <h2>Chunky Glyph Tee</h2>
+                    <div class="quantity">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    <p class="price">120'000₮</p>
+                </div>
+                <button class="remove">🗑</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="product-image.jpg" alt="Chunky Glyph Tee">
+                <div class="details">
+                    <h2>Chunky Glyph Tee</h2>
+                    <div class="quantity">
+                        <button>-</button>
+                        <span>1</span>
+                        <button>+</button>
+                    </div>
+                    <p class="price">120'000₮</p>
+                </div>
+                <button class="remove">🗑</button>
+            </div>
+
+            <div class="total">
+                <p>Нийт төлөх дүн:</p>
+                <p class="total-price">360'000₮</p>
+            </div>
+            <button onclick="window.location.href='basket2.html'" class="checkout">Худалдан авах</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Computer Store</h3>
+            <p>Бидний байршил: Монгол улс</p>
+            <p>Утас: 99001122</p>
+            <p>Имэйл: info@store.mn</p>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

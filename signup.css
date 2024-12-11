@@ -4,14 +4,6 @@ body {
     padding: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
-}
-
 .search-bar {
     display: flex;
     align-items: center;
@@ -63,28 +55,16 @@ main {
 }
 
 .registration-form button {
+    display: block;
     width: 100%;
     padding: 10px;
-    background-color: #6a5acd;
+    margin-top: 20px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-}
+    text-align: center;
 
-footer {
-    background: linear-gradient(90deg, #e2d9f3, #f8e3f8);
-    padding: 20px;
-    color: #333;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-content h3, .footer-content h4 {
-    margin-bottom: 10px;
 }
